@@ -24,10 +24,6 @@ pipeline {
         stage('Build & Deploy to Dev') {
             steps {
                 sh """
-                scp -r . user@${DEV_SERVER}:${REMOTE_DIR}
-
-                ssh user@${DEV_SERVER} '
-                    cd ${REMOTE_DIR}
                     docker build -t ${APP_NAME}:dev .
                     docker stop ${APP_NAME} || true
                     docker rm ${APP_NAME} || true
