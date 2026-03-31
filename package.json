@@ -7,7 +7,7 @@
     "start": "node app/app.js"
     "build": "echo Building...",
     "test": "echo Testing..."
-  },
+  }
   "dependencies": {
     "express": "^4.18.2"
   }
