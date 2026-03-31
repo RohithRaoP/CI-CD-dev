@@ -27,8 +27,7 @@ pipeline {
                     docker build -t ${APP_NAME}:dev .
                     docker stop ${APP_NAME} || true
                     docker rm ${APP_NAME} || true
-                    docker run -d --name ${APP_NAME} -p 3000:3000 ${APP_NAME}:dev
-                '
+                    docker run -d --name ${APP_NAME} -p 3000:3000 dev:dev
                 """
             }
         }
