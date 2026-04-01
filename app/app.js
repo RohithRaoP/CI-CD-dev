@@ -7,7 +7,7 @@ const features = { login: true, payment: false };
 
 // Endpoint to list all features
 app.get('/features', (req, res) => {
-  res.json(features);
+  res.send('App is running sucessfully);
 });
 
 // Endpoint to update a feature toggle
