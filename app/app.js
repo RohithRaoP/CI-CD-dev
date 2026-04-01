@@ -6,11 +6,11 @@ app.use(express.json());
 const features = { login: true, payment: false };
 
 // Endpoint to list all features
-app.get('/features', (req, res) => {
-  res.send('
-           <h1> Dev Environment Deployment Sucessful</h1>
-           <P> Application is running and ready for testing & validation.</p>
-    );
+app.get('/', (req, res) => {
+  res.send(`
+    <h1>🚀 Dev Environment Deployment Successful</h1>
+    <p>Application is running and ready for testing & validation.</p>
+  `);
 });
 
 // Endpoint to update a feature toggle
